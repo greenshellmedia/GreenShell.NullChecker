@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiamHT.NullChecker.Core", "NullChecker\LiamHT.NullChecker.Core.csproj", "{42FDBD25-358C-4E6B-BF40-BC76A69B8FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiamHT.NullChecker.Core.Tests", "NullChecker.Tests\LiamHT.NullChecker.Core.Tests.csproj", "{B0C33755-511D-4B61-8AA4-2CF09990B4C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42FDBD25-358C-4E6B-BF40-BC76A69B8FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42FDBD25-358C-4E6B-BF40-BC76A69B8FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42FDBD25-358C-4E6B-BF40-BC76A69B8FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42FDBD25-358C-4E6B-BF40-BC76A69B8FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0C33755-511D-4B61-8AA4-2CF09990B4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C33755-511D-4B61-8AA4-2CF09990B4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C33755-511D-4B61-8AA4-2CF09990B4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C33755-511D-4B61-8AA4-2CF09990B4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE1490A4-5028-47DC-92EA-21440D545023}
+	EndGlobalSection
+EndGlobal
