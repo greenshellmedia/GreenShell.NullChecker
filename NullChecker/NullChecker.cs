@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace LiamHT.NullChecker.Core
@@ -29,10 +30,25 @@ namespace LiamHT.NullChecker.Core
         /// <summary>
         /// Removes the given property from the list of properties to validate against. Meaning that validation will pass if the given property is null
         /// </summary>
-        /// <param name="propertyName">The name of the property to allow null values for</param>
+        /// <param name="fieldPath">An expression to the field for ignoring.</param>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the property referenced by name cannot be found on the type set for validation</exception>
-        public NullChecker<T> Ignore(string propertyName)
+        public NullChecker<T> Ignore<TField>(Expression<Func<T, TField>> fieldPath)
         {
+            var expression = fieldPath.Body as MemberExpression;
+
+            if (expression == null )
+            {
+                throw new ArgumentException("Input must be a path to a property or field");
+            }
+
+            var path = (MemberExpression)fieldPath.Body;
+            var propertyName = path.Member.Name;
+
+            if (!_propertiesToValidate.Any(c => c.Name == propertyName))
+            {
+                throw new ArgumentException("Property must be a member of the class being nullchecked");
+            }
+
             var prop = _propertiesToValidate.SingleOrDefault(x => x.Name == propertyName);
 
             if (propertyName == null)

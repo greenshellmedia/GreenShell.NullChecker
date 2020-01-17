@@ -45,7 +45,7 @@ namespace LiamHT.NullChecker.Core.Tests
             var resultWithoutIgnore = NullChecker.For(toValidate).Validate();
 
             var resultWithIgnore = NullChecker.For(toValidate)
-                .Ignore(nameof(toValidate.FullName))
+                .Ignore(c => c.FullName)
                 .Validate();
 
             Assert.False(resultWithoutIgnore);
@@ -53,13 +53,54 @@ namespace LiamHT.NullChecker.Core.Tests
         }
 
         [Fact]
+        public void Ignore_IfExpressionIsMethodExecutedWithReturnType_ThrowsArgumentExceptionn()
+        {
+            var toValidate = new TestableObject();
+
+            var resultWithoutIgnore = NullChecker.For(toValidate).Validate();
+
+            var checker = NullChecker.For(toValidate);
+
+            Assert.Throws<ArgumentException>(() =>
+                checker.Ignore(c => c.MethodWithReturnType())
+            );
+        }
+
+
+        [Fact]
+        public void Ignore_IfExpressionIsInvalidPropertyThrowsArgumentException()
+        {
+            var toValidate = new TestableObject();
+
+            var resultWithoutIgnore = NullChecker.For(toValidate).Validate();
+
+            var checker = NullChecker.For(toValidate);
+
+            Assert.Throws<ArgumentException>(() =>
+                checker.Ignore(c => new OtherTestableObject().InvalidProperty)
+            );
+        }
+
+        [Fact]
+        public void Ignore_IfExpressionIsNotOnObject_ThrowsArgumentException()
+        {
+            var toValidate = new TestableObject();
+
+            var checker = NullChecker.For(toValidate);
+
+            Assert.Throws<ArgumentException>(() =>
+                checker.Ignore(c => "hello world")
+            );
+        }
+
+        [Fact]
         public void AllowValueTypeValidation_WhenValidated_IfValueObjectIsDefault_ReturnsFalse()
         {
             var withDefault = new TestableObject()
             {
-                 //DateOfBirth = Default,
-                 Age = 99,
-                 FullName = "Liamht"
+                //DateOfBirth = Default,
+                Age = 99,
+                FullName = "Liamht"
             };
 
             var withoutDefault = new TestableObject()

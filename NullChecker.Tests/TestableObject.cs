@@ -10,5 +10,14 @@ namespace LiamHT.NullChecker.Core.Tests
 
         public DateTime DateOfBirth { get; set; }
 
+        public int MethodWithReturnType()
+        {
+            return 6;
+        }
+    }
+
+    internal class OtherTestableObject
+    {
+        public string InvalidProperty { get; set; }
     }
 }
