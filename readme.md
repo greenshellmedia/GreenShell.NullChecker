@@ -19,7 +19,7 @@ NullChecker.For(MyObject)
 **Ignore** 
 Removes the property from the list of properties to validate against            
 ```C#
- NullChecker.For(myObject).Ignore("MyProperty").Validate()
+ NullChecker.For(myObject).Ignore(obj => obj.MyProperty).Validate()
  ```
 **AllowValueTypeValidation**
 Validates value objects, ensures the validate method will return false if any value objects are set to their default value (if they are not explicitly ignored)

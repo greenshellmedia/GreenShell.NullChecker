@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NullChecker\LiamHT.NullChecker.Core.csproj" />
+    <ProjectReference Include="..\GreenShell.Nullchecker\GreenShell.NullChecker.Core.csproj" />
   </ItemGroup>
 
 </Project>
