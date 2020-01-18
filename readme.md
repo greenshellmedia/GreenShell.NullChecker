@@ -1,4 +1,4 @@
-# NullChecker
+# NullChecker.Core
 
 NullChecker is a lightweight, re-usable way to validate that a created class has all of it's properties set. Useful when unit testing factory methods, or any methods that involve the creation of complex objects no matter how simple or convoluted.
 
