@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>GreenShell.NullChecker is a lightweight, re-usable way to validate that a created class has all of it's properties set. Useful when unit testing factory methods, or any methods that involve the creation of complex objects no matter how simple or convoluted.</Description>
+    <PackageProjectUrl>https://github.com/greenshellmedia/GreenShell.NullChecker</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/greenshellmedia/GreenShell.NullChecker</RepositoryUrl>
+    <PackageTags />
+    <PackageReleaseNotes>Initial release for nuget consumption</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
