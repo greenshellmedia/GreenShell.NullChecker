@@ -1,6 +1,6 @@
 # NullChecker.Core
 
-NullChecker is a lightweight, re-usable way to validate that a created class has all of it's properties set. Useful when unit testing factory methods, or any methods that involve the creation of complex objects no matter how simple or convoluted.
+GreenShell.NullChecker is a lightweight, re-usable way to validate that a created class has all of it's properties set. Useful when unit testing factory methods, or any methods that involve the creation of complex objects no matter how simple or convoluted.
 
 ## The Problem To Solve
 When unit testing, an often overlooked test case is to verify that every property on an object is set. This leads to time wasted investigating what has gone wrong across your entire code base when the output from your UI has nulls inside a property that was supposed to be populated.  NullChecker solves this by using reflection to read every property on a class and ensure that it is not null. This means that in the future, a unit test will fail if a new property is added but is not mapped correctly.
