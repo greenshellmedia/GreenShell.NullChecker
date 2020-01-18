@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LiamHT.NullChecker.Core.Tests
+namespace GreenShell.NullChecker.Core.Tests
 {
     internal class TestableObject
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace LiamHT.NullChecker.Core.Tests
+namespace GreenShell.NullChecker.Core.Tests
 {
     public class NullCheckerTests
     {
@@ -18,7 +18,7 @@ namespace LiamHT.NullChecker.Core.Tests
         {
             var toValidate = new TestableObject()
             {
-                FullName = "liamht"
+                FullName = "GreenShell"
             };
 
             var result = NullChecker.For(toValidate).Validate();
@@ -100,14 +100,14 @@ namespace LiamHT.NullChecker.Core.Tests
             {
                 //DateOfBirth = Default,
                 Age = 99,
-                FullName = "Liamht"
+                FullName = "GreenShell"
             };
 
             var withoutDefault = new TestableObject()
             {
                 DateOfBirth = DateTime.Now,
                 Age = 99,
-                FullName = "Liamht"
+                FullName = "GreenShell"
             };
 
             var resultWithDefaults = NullChecker.For(withDefault).AllowValueTypeValidation().Validate();

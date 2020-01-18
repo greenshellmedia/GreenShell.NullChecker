@@ -7,7 +7,8 @@
     <PackageProjectUrl>https://github.com/greenshellmedia/GreenShell.NullChecker</PackageProjectUrl>
     <RepositoryUrl>https://github.com/greenshellmedia/GreenShell.NullChecker</RepositoryUrl>
     <PackageTags />
-    <PackageReleaseNotes>Initial release for nuget consumption</PackageReleaseNotes>
+    <PackageReleaseNotes>Renamed namespaces to reflect new name. Major version as namespace change = not backwards compatible</PackageReleaseNotes>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

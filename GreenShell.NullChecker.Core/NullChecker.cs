@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace LiamHT.NullChecker.Core
+namespace GreenShell.NullChecker.Core
 {
     public static class NullChecker
     {
